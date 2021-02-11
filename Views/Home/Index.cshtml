@@ -1,0 +1,53 @@
+@{
+    ViewData["Title"] = "Login";
+}
+<main>
+
+    <section id="conteudo">
+        <div class="centraform">
+            <form method="POST" action='@Url.Action("Logando")'>
+                <div class="centralizarlogo">
+                    <img src="/img/Instadev (1).svg" alt="Logotipo do site Instadev">
+                </div>
+
+                <input class="input" type="email" name="Email" placeholder="E-mail" required>
+                <input class="input" type="password" name="Senha" placeholder="Senha" required>
+                <a asp-area="direcionando para o feed" asp-controller="Publication" asp-action="Feed">
+                    <input class="botao" type="submit" value=Entrar>
+                </a><br>
+                <div class="erro">@TempData.Peek("Mensagem")</div>
+
+
+                <p class="esqueciasenha"><a href="#">Esqueceu a senha?</a></p>
+                @* <hr class="hr2"> *@
+                <div class="testehr">
+                    <hr>
+                    <p>OU</p>
+                    <hr>
+                </div>
+            </form>
+
+        </div>
+    </section>
+    <section class="centralizarcadastrese">
+        <div class="centralizarlink">
+            <p>Não tem uma conta? </p>
+            <p><a asp-area="direcionamento para cadastro" asp-controller="User"
+                    asp-action="Register" class="cad">&nbspCadastre-se</a></p>
+
+        </div>
+    </section>
+    <p class="frasenocentro">Obtenha o aplicativo.</p>
+    <div class="centrafoot">
+        <div class="store">
+            <a href="https://www.apple.com/pt/ios/app-store/">
+                <img src="/img/app_store 1.jpg" alt="linkda AppStore">
+            </a>
+            <a href="https://play.google.com/store">
+                <img src="/img/google_play 1.png" alt="Link do GooglePlay">
+            </a>
+
+        </div>
+
+    </div>
+</main>

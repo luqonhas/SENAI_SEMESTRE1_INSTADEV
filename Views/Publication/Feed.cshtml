@@ -1,0 +1,136 @@
+@{
+    ViewData["Title"] = "Feed";
+
+}
+
+
+<html lang="pt-br">
+
+ <header class="menu">
+        <section class="nav">
+            <div class="logo">
+                <a asp-area="Voltar para o Feed" asp-controller="Publication" asp-action="Feed">
+                    <img src="/imgEdit/Instadev.svg" alt="Logo do Instadev">
+                </a>
+            </div>
+
+            <div class="search">
+                <button class="submit-lupa" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+                <input type="text" placeholder="Pesquisar" class="search-input" />
+
+            </div>
+
+            <div class="menu-btn">
+                <i class="fas fa-home"></i>
+                <i class="far fa-paper-plane"></i>
+                <i class="far fa-compass"></i>
+                <i class="far fa-heart"></i>
+                <div class="perfil">
+                    <a asp-area="Direcionamento para a página de perfil" asp-controller="Profile" asp-action="Profile">
+                        <img src="/imgEdit/thank-you 2.svg" alt="Foto de perfil">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </header>
+<body>
+    <section>
+        <div class="storiesperfil">
+            <div class="stories">
+                <div class="stories1">
+                    <img src="/img/vin-diesel 1.svg" alt="stories 2">
+                    <p>
+                        vin_diesel
+                    </p>
+                </div>
+                <div class="stories1">
+                    <img src="/img/gabigordo 1.svg" alt="stories 2">
+                    <p>
+                        gabigordo
+                    </p>
+                </div>
+                <div class="stories1">
+                    <img src="/img/will-baiano 1.svg" alt="stories 3">
+                    <p>
+                        will_baiano
+                    </p>
+                </div>
+                <div class="stories1">
+                    <img src="/img/tony_stark 1.svg" alt="stories 4">
+                    <p>
+                        adriano_stark
+                    </p>
+                </div>
+                <div class="stories1">
+                    <img src="/img/pele 1.svg" alt="stories 5">
+                    <p>
+                        King_pelé
+                    </p>
+                </div>
+                <div class="stories1">
+                    <img src="/img/samuel-rosa-bebê 1.svg" alt="stories 6">
+                    <p>
+                        samuel_rosa
+                    </p>
+                </div>
+                <div class="stories1">
+                    <img src="/img/chaves_metal 1.svg" alt="stories 7">
+                    <p>
+                        chaves_metal
+                    </p>
+                </div>
+            </div>
+            <div class="perfil2">
+                <div class="photo">
+                    <a asp-area="Direcionamento para a página de perfil" asp-controller="Profile" asp-action="Profile">
+                        <img src="/img/thank-you 2.svg">
+                    </a>
+                </div>
+                <div class="texto-perfil">
+                    <h2>
+                        Marcos Jeeves
+                    </h2>
+                    <p>
+                        Marcos Jeeves
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="Posts">
+        <div class="postar">
+            <div class="foto-postar">
+                <img src="/img/thank-you 3.svg" alt="Foto de perfil">
+                <h2>
+                    Postar
+                </h2>
+            </div>
+            <div class="botoes-postar">
+                <form method="POST" action='@Url.Action("Publicar")' enctype="multipart/form-data">
+                <div class="desc">
+                        <input type="text" name="Subtitle" id="" placeholder="Digite a descrição da imagem" class="descr">
+                            <div class="selectImg">
+                                <label for="file" >Escolha a imagem</label>
+                                <input type="file" id="file" name="Image" class="b-img" placeholder="Escolha a imagem" style="visibility:hidden;">
+                            </div>
+                        <input type="submit" name="Image" class="b-img2">
+                </div>
+                    <div class="areavermelha">
+                        @foreach (var p in @ViewBag.Publications)
+                        {
+                            <div class="img-post">
+                                <img class="img-do-post" src="~/img/Posts/@p.Image" width="500" height="320" />
+                                <p class="img-description">@p.Subtitle</p>
+                            </div>
+                        }
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+
+    </section>
+</body>

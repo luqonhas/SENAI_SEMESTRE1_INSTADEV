@@ -1,0 +1,261 @@
+@import url('//db.onlinewebfonts.com/c/623c7118249e082fe87a78e08506cb4b?family=Segoe+UI');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    background-color: white;
+  
+}
+
+.menu{
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    box-shadow: 2px 2px 0px rgb(167, 163, 163, 0.3);
+}
+
+.nav{
+    margin: 0 auto;
+    width: 90%;
+    height: 80px;
+    display: flex;
+    max-width: 1400px;
+    justify-content: space-around;
+    align-items:center;
+
+}
+
+/* Aqui criamos a Logo, Redimensionamos e alinhamos*/
+
+
+.logo img{
+    width:78px;
+    height: 27px;
+}
+
+/* Aqui é a área de pesquisa*/
+.search{
+    width: 225px;
+    height: 23px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    border: solid 1px #AFAFAF;
+    border-radius: 3px;
+
+}
+.search-input{
+    width: 80px;
+    display: flex;
+    padding: 0px 5px;
+    align-items:center;
+    font-size: 13px;
+    text-align: center;
+    justify-content: center;
+    color: #AFAFAF;
+    font-family:'Segoe UI',sans-serif;
+    border: none;
+}
+
+.submit-lupa{
+    display: flex;
+    border: none;
+    color: #AFAFAF;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Aqui é o Menu com as opções */
+.menu-btn{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+
+}
+
+.menu-btn i{
+    padding: 0px 10px;
+    font-size: 24px 25px;
+}
+
+/* Aqui é a imagem de perfil*/
+.perfil1 img{ 
+    display: flex;
+    width: 32px;
+    height: 32px;
+}
+.storiesperfil{
+    width: 65%;
+    height: 130px;
+    margin-left: 260px;
+    margin-top: 20px;
+    display: flex;
+  
+}
+.stories{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 2px 2px 0px rgb(167, 163, 163, 0.3);
+}
+.stories1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stories1 img{
+    width: 55px;
+    height: 56px;
+}
+.stories1 p{
+    font-size: 12.1px;
+    ;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.perfil2{
+    
+    width:30%;
+    margin-left:20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.photo{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 30px;;
+    
+}
+.perfil2 img{
+    margin-bottom: 10px;
+   width: 60px;
+   height: 60px; 
+  
+}
+.texto-perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.perfil2 h2{
+    font-size:15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.perfil2 p{
+    color: #B6B6B6;
+    font-size:13px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.Posts{
+    width: 44.5%;
+    height: 50em;
+    margin-left: 260px;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+}
+.postar{
+    width: 100%;
+    height: 10em;
+    box-shadow: 2px 2px 0px rgb(167, 163, 163, 0.3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.foto-postar{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    align-items:center;
+    font-size: 10px;
+}
+.foto-postar h2{
+    padding-right: 0.5em;
+}
+.postar h1{
+    margin-left: 1.4em;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.botoes-postar{
+    display:flex;
+    width: 100%;
+    padding-top:4em;
+    justify-content: space-around;
+}
+
+.descr{
+    background: #FAFAFA;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 180px;
+    margin-right:1em;
+}
+.desc{
+    display:flex;
+    align-items: center;
+    color: #ABABAB;
+    border-radius: 5px;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-right:1em;
+}
+
+.selectImg{
+    background: #D1D1D1;
+    border-radius: 5px;
+    width: 157px;
+    height:27px;
+    cursor: pointer;
+    text-align:center;
+    align-items: center;
+    margin-right: 1em;
+    font-size: 15px;
+}
+.desc p{
+    color: #ABABAB;
+    font-size: 11px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+    }
+.b-img{
+    background: #D1D1D1;
+    border-radius: 5px;
+    margin-right:1em ;
+
+}
+.b-img2{
+    color: white;
+    background-color: #2686CC;
+    margin-right: 3em;
+    width:140px;
+    height:27px;
+    border-radius: 5px;
+    border:#2686CC solid 1px ;
+}
+.areavermelha{
+    align-items: center;
+    margin-top: 4em;
+}
+.img-post {
+    width: 100%;
+    height: 21.43em;    
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    flex-wrap: wrap;
+}
+
+
+.img-post p{
+    color:black;
+    text-align:center;
+    font-size: 12px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

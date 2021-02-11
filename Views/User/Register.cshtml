@@ -1,0 +1,67 @@
+@{
+    ViewData["Title"] = "Cadastro";
+}
+
+<main> <!-- o "main" define o que é o conteúdo principal da tela -->
+    <section class="form-section"> <!-- essa é a sessão da página || a classe "formulário" é pra ajudar na parte do css (deu o nome formulário porque o usuário terá que preencher esse "formulário" com os seus dados) -->
+        
+        <div class="box-main">
+            <h1 class="register-title">Instadev</h1> <!-- esse será o título "InstaDev" que fica em cima do formulário || tem essa classe "titulo" para conseguir chamar no css -->
+            <div class="pre-form">
+                <p>Cadastre-se para ver fotos e</p>
+                <p>vídeos dos seus amigos.</p>
+            </div>
+
+            <form method="POST" action='@Url.Action("Registration")'> <!-- esse será o formulário sem si || aqui ficará os "inputs" para o usuário preencher -->
+                
+                <!-- começo da parte dos inputs -->
+                <div class="register">
+                    <input  name="IdUser" type="hidden" class="input"> <!-- o "type" será sobre o que vai ser preenchido nesse input || o "id" || o "placeholder" será o texto dentro do input que indica para o usuário sobre o que será preenchido dentro || a classe "input" é para conseguir puxar os inputs para o css e editá-los -->
+                </div>
+
+                <div class="register">
+                    <input name="Email" type="email" placeholder="Email" class="input" required> <!-- o "type" será sobre o que vai ser preenchido nesse input || o "id" || o "placeholder" será o texto dentro do input que indica para o usuário sobre o que será preenchido dentro || a classe "input" é para conseguir puxar os inputs para o css e editá-los -->
+                </div>
+                
+                <div class="register">
+                    <input name="CompleteName" type="text" placeholder="Nome completo" class="input" required> <!-- o "type" será sobre o que vai ser preenchido nesse input || o "id" || o "placeholder" será o texto dentro do input que indica para o usuário sobre o que será preenchido dentro || a classe "input" é para conseguir puxar os inputs para o css e editá-los -->
+                </div>
+
+                <div class="register">
+                    <input name="UserName" type="text" placeholder="Nome de usuário" class="input" required> <!-- o "type" será sobre o que vai ser preenchido nesse input || o "id" || o "placeholder" será o texto dentro do input que indica para o usuário sobre o que será preenchido dentro || a classe "input" é para conseguir puxar os inputs para o css e editá-los -->
+                </div>
+                
+                <div class="register">
+                    <input name="Password" type="password" placeholder="Senha" class="input" minlength="5" maxlength="10" required> <!-- o "type" será sobre o que vai ser preenchido nesse input || o "id" || o "placeholder" será o texto dentro do input que indica para o usuário sobre o que será preenchido dentro || a classe "input" é para conseguir puxar os inputs para o css e editá-los -->
+                </div>
+                <!-- fim da parte dos inputs -->
+
+                <!-- começo do botão para cadastrar -->
+                <button type="submit" class="register-btn">Cadastre-se</button>
+                <!-- fim do botão para cadastrar -->
+                
+            </form>
+
+            <div class="pos-form">
+                <p>Ao se cadastrar, você concorda com nossos</p>
+                <p><a asp-area="Direcionamento para a página de Termos" asp-controller="" asp-action="">Termos</a>,&nbsp
+                <a asp-area="Direcionamento para a página de Política de Dados" asp-controller="" asp-action="">Política de Dados</a>&nbspe&nbsp
+                <a asp-area="Direcionamento para a página de Política de Cookies" asp-controller="" asp-action="">Política de Cookies</a>.</p>
+            </div>
+        </div>
+
+        <section class="extra-section">
+            <div class="connect">
+                <p>Tem uma conta?&nbsp<a asp-area="Direcionamento para a página de Login" asp-controller="Home" asp-action="Index">Conecte-se</a></p>
+            </div>
+
+            <div class="app">
+                <p>Obtenha o aplicativo.</p>
+                <div class="images-app">
+                    <a target="_blank" rel="Baixar Instagram no IOS" href="https://apps.apple.com/br/app/instagram/id389801252"><img src="/img/app_store 1.png" alt="Obter o aplicativo pela App Store"></a> <!-- o "scr" é onde colocamos a imagem || o "alt" é onde descrevemos a imagem -->
+                    <a target="_blank" rel="Baixar Instagram no Android" href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=pt_BR&gl=US"><img src="/img/google_play 1.png" alt="Obter o aplicativo pela Google Play"></a><!-- o "scr" é onde colocamos a imagem || o "alt" é onde descrevemos a imagem -->
+                </div>
+            </div>
+        </section>
+    </section>
+</main>

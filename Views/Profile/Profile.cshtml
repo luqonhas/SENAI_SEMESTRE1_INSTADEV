@@ -1,0 +1,122 @@
+@using Project_Instadev.Models
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<body>
+    <header class="menu">
+        <section class="nav">
+            <div class="logo">
+                <a asp-area="Voltar para o Feed" asp-controller="Publication" asp-action="Feed">
+                    <img src="/imgEdit/Instadev.svg" alt="Logo do Instadev">
+                </a>
+            </div>
+
+            <div class="search">
+                <button class="submit-lupa" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+                <input type="text" placeholder="Pesquisar" class="search-input" />
+
+            </div>
+
+            <div class="menu-btn">
+                <i class="fas fa-home"></i>
+                <i class="far fa-paper-plane"></i>
+                <i class="far fa-compass"></i>
+                <i class="far fa-heart"></i>
+                <div class="perfil">
+                    <a asp-area="Direcionamento para a página de perfil" asp-controller="Profile" asp-action="Profile">
+                        <img src="/imgEdit/thank-you 2.svg" alt="Foto de perfil">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="biografia">
+            <div class="bio">
+                <div class="perfil2">
+                    <img src="~/img/thank-you 2.png" alt="Foto de Perfil">
+                </div>
+
+                <div class="descricao-perfil">
+                    <h2>yes_baby</h2>
+                    <div class="pss">
+                        <p>1 Publicações</p>
+                        <a href="#">100 seguindo</a>
+                        <a href="#">2 seguidores</a>
+                    </div>
+                    <div class="edicao">
+                        <h4>Marcos Jeeves</h4>
+                        <a asp-area="Direcionamento para edição de Perfil" asp-controller="EditProfile"
+                            asp-action="Edit">Editar perfil</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="public">
+            <div>
+                <div class="picture">
+                    <img src="~/img/icone 1.png" alt="Publicações">
+                    <h1>Publicações</h1>
+                </div>
+                <div class="publicacao">
+                    <div class="~/img-publicacao">
+                        <img src="~/img/baby.png" alt="">
+                    </div>
+                    <div class="descricao-foto">
+                        <div class="foto-perfil-lugar">
+                            <div>
+                                <img src="~/img/thank-you 2.png" alt="Perfil" class="foto">
+                            </div>
+                            <div class="desc-text">
+                                <h2>Marcos Jeeves</h2>
+                                <p><a href="#">Los Angeles, Uruguai</a></p>
+                            </div>
+                        </div>
+                        <div class="heart-comment">
+                            <div class="botao">
+                                <div class="content-txt">
+                                    <div class="content">
+                                        <i onclick="Toggle()" id="btn" class="far fa-heart"></i>
+                                    </div>
+                                    <span class="numb"></span>
+                                    <span class="text">Curtidas</span>
+                                </div>
+                            </div>
+                            <div class="Ballon">
+                                <img src="~/img/ballon.png" alt="Comentários">
+                            </div>
+                        </div>
+                        <div class="resto">
+                            <p>Ver todos os 69 Comentários</p>
+                        </div>
+                        @foreach (Comments x in ViewBag.Comments)
+                        {
+
+                            <div class="coments">
+                                <div class="title">
+                                    <h6>Marcos Jeeves</h6>
+                                </div>
+                                <div class="txt">
+                                    <p>@x.Message</p>
+                                    <p class="delet"><a class="delete" asp-controller="Profile" asp-action="Delete"><img
+                                    class="delete-img" src="~/img/lixinho.png"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        }
+
+                        <div class="coments2">
+                            <form method="POST" action='@Url.Action("Comment")'>
+                                <input name="Message" class="comentario" placeholder="Digite aqui" type="text">
+                                <button type="submit" class="bbtn">Comentar...</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+</body>

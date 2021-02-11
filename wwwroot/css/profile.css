@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+.menu{
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    box-shadow: 2px 2px 0px rgb(167, 163, 163, 0.3);
+}
+
+.nav{
+    margin: 0 auto;
+    width: 90%;
+    height: 80px;
+    display: flex;
+    max-width: 1400px;
+    justify-content: space-around;
+    align-items:center;
+
+}
+
+/* Aqui criamos a Logo, Redimensionamos e alinhamos*/
+
+
+.logo img{
+    width:78px;
+    height: 27px;
+}
+
+/* Aqui é a área de pesquisa*/
+.search{
+    width: 225px;
+    height: 23px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    border: solid 1px #AFAFAF;
+    border-radius: 3px;
+
+}
+.search-input{
+    width: 80px;
+    display: flex;
+    padding: 0px 5px;
+    align-items:center;
+    font-size: 13px;
+    text-align: center;
+    justify-content: center;
+    color: #AFAFAF;
+    font-family:'Segoe UI',sans-serif;
+    border: none;
+}
+
+.submit-lupa{
+    display: flex;
+    border: none;
+    color: #AFAFAF;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Aqui é o Menu com as opções */
+.menu-btn{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+
+}
+
+.menu-btn i{
+    padding: 0px 10px;
+    font-size: 24px 25px;
+}
+
+/* Aqui é a imagem de perfil*/
+.perfil1 img{ 
+    display: flex;
+    width: 32px;
+    height: 32px;
+}
+
+/*aqui começa a biografia*/
+.biografia{
+    width: 100%;
+    height: 220px;
+    justify-content: center;
+    display: flex;
+}
+.bio{
+    width: 70%;
+    height: 225px;
+    display: flex;      
+}
+.perfil2 img{
+    display: flex;
+    width: 132px;
+    height: 134px;
+    padding-top: 37px;
+    padding-left: 22px ;
+}
+.descricao-perfil{
+    width: 600px;
+    height: 190px;
+    padding-left: 105px;
+    padding-bottom: 35px;
+    display: flex ;
+    flex-wrap: wrap;
+    align-items: initial;
+}
+.descricao-perfil h2{
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.descricao-perfil h4{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pss{
+    width: 550px;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+.pss a{
+    text-decoration: none;
+    color: black;
+    padding-top: 20px;
+}
+.edicao{
+    width: 550px;
+    display: flex;
+    justify-content: space-between;    
+}
+.edicao a{
+    padding-top: 20px;
+    text-decoration: none;
+    color: #2686CC;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.edicao a:hover{
+    text-decoration: underline;
+}
+
+.edicao h4{
+    font-size: 15px;
+}
+/*aqui começa a publicação do usuário*/
+.public{
+    width: 100%;
+    height: 600px;
+    justify-content: center;
+}
+.picture{
+    width: 850px;
+    height: 18px;
+    justify-content: center;
+    display: flex;
+    padding-bottom: 10px;
+}
+.picture img{
+    width: 16px;
+    height: 14px;
+    padding-top: 15px;
+    align-items: center;
+}
+.picture h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    padding-bottom: 10px;
+    position: relative;
+    bottom: 2px;
+
+}
+.publicacao{
+    width: 1003px;
+    height: 420px;
+    background-color: #FFFFFF;
+    margin-left: 250px;
+    margin-top: 60px;
+    display: flex;
+}
+.img-publicacao img{
+    height: 420px;
+}
+.descricao-foto{
+    width: 50%;
+    height: 404px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.descricao-foto img{
+    width: 65px;
+    height: 66px;
+    padding-left: 37px;
+    padding-top: 27px;
+}
+.foto-perfil-lugar{
+    display: flex;
+}
+
+
+.foto-perfil-lugar img{
+    display: flex;
+    width: 42px;
+    height: 42px;
+}
+
+.desc-text{
+    margin-left: 25px;
+}
+.desc-text h3{
+    color: black;
+    height: 10px;
+}
+.desc-text a{
+    text-decoration: none;
+    color: #2686CC;
+}
+.heart-comment{
+    width: 400px;
+    display: flex;
+    margin-right: 50px;
+    align-items: baseline;
+}
+.Like img{
+    width: 23.33px;
+    height: 20.42px;
+}
+.Ballon img{
+    width: 23px;
+    height: 20px;
+}
+.botao{
+    padding-top: 10px;
+    width: 100%;
+    height: 10%;
+    /* background-color: crimson; */
+    display: flex;
+    align-items: flex-end;
+}
+.content-txt{
+    width: 43.5%;
+    height: 100%;
+    /* background-color: rebeccapurple ; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid #eae2e1; */
+    height: 55%;
+    width: 15%;
+    cursor: pointer;
+}
+.text{
+    font-family: Segoe UI;
+    padding-left: 5px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 17px;
+    color: #000000; 
+    text-transform: uppercase;
+}
+.numb:before{
+    content: '0';
+    font-family: Segoe UI;
+    padding-left: 10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 17px;
+    color: #000000; 
+    
+}
+.numb.heart-active:before{
+    content: '1'; 
+}
+.fas{
+    font-size: 25px;
+}
+.far{
+    font-size: 25px;
+}
+.coments{
+    /* background-color: blue; */
+    width: 100%;
+    margin: 10px 0px;
+    height: 40px;
+    display: flex;
+}
+.title{
+    width: 100px;
+    height: 20px;
+    /* background-color: cadetblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title h6{
+    font-family: Segoe UI;
+    padding-left: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 17px;
+    color: #000000;
+}
+.txt{
+    /* background-color: coral; */
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+.delete img{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    
+}
+.delet{
+    /* background-color: red; */
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+.coments2{
+    /* background-color: rgb(255, 0, 157); */
+    width: 100%;
+    margin: 10px 0px;
+    height: 40px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.comentario{
+    width: 250px;
+    background-color: #fafafa;
+    font-size: 13px;
+    height: 20px;
+    text-align: center;
+    border-radius: 4px;
+    border-color: 1px solid #eeeeee;
+    
+}
+.bbtn{
+    width: 100px;
+    background-color: #fafafa;
+    font-size: 13px;
+    height:26px;
+    text-align: center;
+    border-radius: 4px;
+    border-color: 1px solid #eeeeee;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.curtidas{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 900;
+    margin-left: 35px;
+}
+.container{
+    width: 500px;
+    height: 40px;
+    display: flex;
+}
+.users-comment{
+    width: 500px;
+    display: flex;
+    justify-content: baseline;
+    margin-left: 39px;
+}
+.users-comment h4{
+    font-size: 13px;
+    margin-top: 10px;
+}
+.users-comment p{
+    font-size: 12px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+.coracoes img{
+    Width:15px;
+    Height: 13.15px;
+    padding-top: 15px;
+}
+.resto{
+    margin-left: 39px;
+    padding-bottom: 10px;
+    color: rgba(128, 128, 128, 0.582);
+    font-size: 14px;
+}

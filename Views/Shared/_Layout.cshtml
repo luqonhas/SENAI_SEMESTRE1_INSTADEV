@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - InstaDev</title>
+
+    @switch (@ViewData["Title"])
+    {
+        case "Cadastro":
+            <link rel="stylesheet" href="~/css/register.css" /> @* Pasta do CSS mudada para a "estilo.css" *@
+            break;
+
+        case "Login":
+            <link rel="stylesheet" href="~/css/login.css" />
+            break;
+
+        case "Feed":
+            <link rel="stylesheet" href="~/css/feed.css" />
+             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+            break;
+
+        case "Profile":
+            <link rel="stylesheet" href="~/css/profile.css" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+            break;
+
+        case "EditProfile":
+            <link rel="stylesheet" href="~/css/editProfile.css" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+            break;
+
+
+        default:
+            break;
+    }
+
+</head>
+
+<body>
+    @* <header class="menu">
+        <section class="nav">
+            <div class="logo">
+                <a asp-area="Voltar para o Feed" asp-controller="Publication" asp-action="Feed">
+                    <img src="/imgEdit/Instadev.svg" alt="Logo do Instadev">
+                </a>
+            </div>
+
+            <div class="search">
+                <button class="submit-lupa" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+                <input type="text" placeholder="Pesquisar" class="search-input" />
+
+            </div>
+
+            <div class="menu-btn">
+                <i class="fas fa-home"></i>
+                <i class="far fa-paper-plane"></i>
+                <i class="far fa-compass"></i>
+                <i class="far fa-heart"></i>
+                <div class="perfil">
+                    <a asp-area="Direcionamento para a página de perfil" asp-controller="Profile" asp-action="Profile">
+                        <img src="/imgEdit/thank-you 2.svg" alt="Foto de perfil">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </header> *@
+
+
+    @RenderBody()
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>

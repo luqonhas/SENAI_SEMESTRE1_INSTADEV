@@ -1,0 +1,163 @@
+@font-face {font-family: "BillabongW00-Regular"; src:
+    url("//db.onlinewebfonts.com/t/6d32b8e06f40fb7698cfb714b9e7975d.eot"); src:
+    url("//db.onlinewebfonts.com/t/6d32b8e06f40fb7698cfb714b9e7975d.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/6d32b8e06f40fb7698cfb714b9e7975d.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/6d32b8e06f40fb7698cfb714b9e7975d.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/6d32b8e06f40fb7698cfb714b9e7975d.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/6d32b8e06f40fb7698cfb714b9e7975d.svg#BillabongW00-Regular") format("svg");}
+
+@import url('//db.onlinewebfonts.com/c/623c7118249e082fe87a78e08506cb4b?family=Segoe+UI'); /* importação da fonte padrão da página */
+
+*{ /* nesta área vamos redefinir as propriedades da página, reajustando as configurações padrões que deixam as coisas desproporcionais para deixá-las proporcionais */
+    box-sizing: border-box; /* iguala os "tamanhos" das coisas da página || por exemplo, sem o "box-sizing: border-box" divs com o mesmo tamanho poderiam parecer com tamanhos diferentes entre uma e outra */
+    margin: 0; /* redefine a margem da página para 0 */
+    padding: 0; /* redefine o preenchimento dos elementos para 0 */
+    outline: none; /* desativa a opção de deixar os elementos com contornos */
+    text-decoration: none; /* desativa a opção de "textos decorados" (por exemplo, textos tracejados) */
+    text-decoration: none; /* desativa a opção de "estilo de lista" (por exemplo, aqueles "pontos/bolinhas" que ficam em tópicos) */
+}
+:root{ /* esse ":root" será uma "raiz" para podermos salvar cores e outras coisas */
+    /* isso funciona como se fosse um "pote de tinta", temos aqui um pote de tinta branca-acinzentada que será usado no background dela, porém pode ser usada em outros lugares, mas não é muito recomendável por conta da organização */
+    
+    --mainBackground: #FAFAFA; /* cor de fundo e de dentro dos inputs */
+    --squareBackground: #FFFFFF; /* cor das áreas de formulários, por exemplo, dentro de onde o usuário vai preencher seus dados(Cadastro) ou entrar na conta(Login) */
+    --squareBorders: #DBDBDB; /* cor das bordas das áreas de formulário, por exemplo */
+    --preFormLetters: #8E8E8E; /* cor das letras do pré formulário */
+    --inputBordersNotClicked: #EEEEEE; /* cor das bordas dos inputs quando "NÃO CLICADOS"*/
+    --inputBorderClicked: #A7A7A7; /* cor das bordas dos inputs quando "CLICADOS" */
+    --inputLetters: #8D9191; /* cor das letras que ficam dentro dos inputs especificando o que é para preencher dentro */
+    --buttonsLetters: #FFFFFF; /* cor das letras de dentro do botão, por exemplo, de Cadastro e Login */
+    --buttonsNotClicked: #0095f6; /* cor dos botões de cadastro e login ainda "NÃO CLICADOS" */
+    --buttonsClicked: #4CB5F9; /* cor dos botões de cadastro e login ainda "CLICADOS" */
+    --posFormLetters: #8B8D9B; /* cor das letras que estão pós formulário que NÃO SÃO HYPERLINKs */
+    --posFormHyperLinkLetters: #898E8B; /* cor das letras que estão pós formulário que SÃO HYPERLINKs */
+    --buttonQuestion: #0095f6; /* cor do "botão" de pergunta, por exemplo, "Conecte-se"(da página de Cadastro) e o "Cadastre-se"(da página de Login) */
+    
+    --titleFont: 'BillabongW00-Regular', serif; /* fonte da logo "InstaDev" */
+    --textFont: 'Segoe UI', Tahoma, Verdana, sans-serif; /* fonte dos textos */
+}
+main{ /* aqui mexeremos no básico do conteúdo principal da página */
+    width: 100%; /* a largura do elemento base do conteúdo principal será 100%, ou seja, ocupará 100% da largura (horizontal) da tela em quaisquer resolução que esteja */
+    
+    /* esse "display: flex" irá mexer na "caixa" na qual está o formulário e seus itens */
+    display: flex; /* o "display: flex" irá disponibilizar o uso de vários outros comandos de "movimento" dos elementos, sendo mais prático na hora de eventuais mudanças */
+    justify-content: center; /* um comando disponibilizado pelo "display: flex" || esse comando mudará a posição do elemento para que se existissem mais elementos, ficariam um do lado do outro, como uma coluna na horizontal || isso também mudará o eixo de movimento do elemento, pois no padrão, o elemento é geralmente movimentado no eixo Y, porém com esse comando, será movimentado no eixo X*/
+    align-items: center; /* um comando disponibilizado pelo "display: flex" || esse comando movimentará o elemento para o meio da página (sem estar grudado na "parede") */
+    height: 100vh; /* essa medida "vh" é uma medida relativa || o "vh" é igual a 1/100px da altura do ViewPort, ou seja, se a altura do ViewPort é 900px, 1vh será igual a 9px, então, 100vh é igual a 900px da ViewPort */
+    background-color: var(--mainBackground); /* aqui está sendo puxada o "pote de tinta" do ":root" para ser colocada no background do "main" */
+}
+.form-section{ /* aqui iremos mexer nas configurações da sessão do formulário, onde está todo o conteúdo onde o usuário terá que preencher para se cadastrar */
+    width: 350px; /* a largura do elemento no qual ficará o formulário de cadastro será de 100% */
+    height: 684px; /* o "vh", como explicado acima, terá o valor de 900px */
+    /* background-color: red; */
+}
+.box-main{
+    margin-top: -25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--squareBackground);
+    border: 1px solid var(--squareBorders);
+    padding: 20px;
+}
+.register-title{ /* aqui iremos modificar o título "InstaDev" do formulário */
+    height: 75px;
+    font-family: var(--titleFont); /* aqui pegamos a fonte do título que estava no Figma do professor (essa "billabong"); a fonte "serif" é apenas um "substituto" para a fonte principal (billabong) caso ela dê erro */
+    font-weight: normal;
+    font-size: 3.7em; /* esse será o tamanho da fonte */
+    margin-bottom: 0; /* esse comando criará uma margem em baixo do título, fazendo com que ele suba */
+    user-select: none; /* esse comando não deixará com que o usuário consiga selecionar o título "InstaDev" */
+}
+.pre-form{
+    margin-bottom: 1em;
+}
+.pre-form p{
+    margin-bottom: 4px;
+    font-size: 16px;
+    font-family: var(--textFont);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    color: var(--preFormLetters);
+}
+.input{ /* aqui irá mexer nos inputs do formulário */
+    width: 100%; /* a largura dos inputs ocuparão toda a "caixa" do formulário */
+    height: 40px; /* os inputs terão 30px de altura */
+    margin-bottom: 10px; /* criará uma margem de 10px em baixo de cada input, separando-os */
+    background-color: var(--mainBackground); /* os fundos dos inputs serão desta cor */
+    border: 1px solid var(--inputBordersNotClicked); /* as bordas dos inputs serão terão a "grossura" de 2px com a cor hexagonal que está no comando */
+    font-size: 13px; /* o tamanho das fontes que ficarão dentro do input serão de 12px */
+    font-family: var(--textFont);
+    color: var(--inputLetters);
+    border-radius: 3px; /* as bordas ficarão arredondadas */
+    padding: 10px; /* as escritas dentro do input terão margens (que no caso será o padding) de 10px, desgrudando as letras das bordas */
+}
+.input:focus{ /* esse ":focus" será responsável pela mudança dentro do input quando clicarmos nele (ou seja, darmos foco) */
+    border: 1px solid var(--inputBorderClicked); /* quando focarmos em tal input, a borda mudará para essa e, ficará com 1px de "grossura" com uma cor mais escura */
+}
+.error{
+    color: #00e01e;
+}
+.register-btn{ /* aqui vamos mudar o botão de cadastrar */
+    width: 300px; /* mudando a largura do botão para 300px */
+    height: 35px; /* mudando a altura do botão para 30px */
+    font-family: var(--textFont); /* mudando a fonte do botão */
+    font-weight: bolder;
+    font-size: 15px;
+    color: var(--buttonsLetters); /* mudando a cor da fonte do botão */
+    margin-bottom: 1em; /* irá criar uma margem a baixo do botão de 1em (1em = 16px) */
+    border: 0;
+    border-radius: 6px;
+    background-color: var(--buttonsNotClicked); /* a cor do botão mudou para azul */
+}
+.register-btn:focus{
+    background-color: var(--buttonsClicked);
+    animation-duration: 0ms;
+}
+.pos-form{
+    margin-top: 10px;
+}
+.pos-form p{
+    margin-bottom: 4px;
+    font-size: 13px;
+    font-family: var(--textFont);
+    display: flex;
+    justify-content: center;
+    color: var(--posFormLetters);
+}
+.pos-form a{
+    font-weight:500;
+    color: var(--posFormHyperLinkLetters);
+}
+.extra-section{
+    margin-top: 1em;
+    width: 350px;
+    height: 200px;
+    font-size: 14px;
+    font-family: var(--textFont);
+    /* background-color: red; */
+}
+.connect{
+    height: 80px;
+    background-color: var(--squareBackground);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--squareBorders);
+}
+.connect a{
+    color: var(--buttonQuestion);
+}
+.app{
+    height: 120px;
+    margin-top: 0.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+.images-app{
+    margin-top: 20px;
+}
