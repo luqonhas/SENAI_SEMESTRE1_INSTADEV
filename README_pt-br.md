@@ -1,4 +1,4 @@
-  <h2 align="center">PROJECT INSTADEV</h2>
+  <h2 align="center">PROJETO INSTADEV</h2>
 
   <p align="center">
     Projeto que busca trazer uma rede social <br>semelhante ao Instagram! 📱
