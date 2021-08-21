@@ -9,7 +9,7 @@
 </p>
 
 ## Traduções 👅
-Versão em **Inglês** disponível [aqui](https://github.com/luqonhas/SENAI_SEMESTER1_InstaDev/blob/master/README.md).
+Versão em **Inglês** disponível [aqui](https://github.com/luqonhas/SENAI_SEMESTER1_InstaDev/blob/master/README_en-us.md).
 <br>
 <br>
 
